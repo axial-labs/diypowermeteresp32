@@ -15,9 +15,13 @@ enumButtonState lastButtonState = NOT_PRESSED;
 #define BLYNK_VIRTUAL_PIN_CORETEMPERATURE V6
 #define BLYNK_VIRTUAL_PIN_RELAY V7
 
+// Blynk Authentication and Wi-Fi Parameters
 char auth[] = "AUTH ID";
 char ssid[] = "SSID";
 char pass[] = "PASSWORD";
+
+// Blynk Server Configuration
+char server_address[] = "axial-labs.tech" uint16_t server_port = 8081;
 
 // Sync Blynk when connected
 BLYNK_CONNECTED()
@@ -31,13 +35,13 @@ BLYNK_WRITE(BLYNK_VIRTUAL_PIN_RELAY)
   int relayState = param.asInt();
   if (relayState == 1)
   {
-	// Relay ON
+    // Relay ON
     PowerMeter.setRelay(ON);
     PowerMeter.setLED(LED_RLY, ON);
   }
   else if (relayState == 2)
   {
-	// Relay OFF
+    // Relay OFF
     PowerMeter.setRelay(OFF);
     PowerMeter.setLED(LED_RLY, OFF);
   }
@@ -57,7 +61,7 @@ void setup()
     PowerMeter.resetEnergy();
 
   // Start Blynk
-  Blynk.begin(auth, ssid, pass, IPAddress(192, 168, 1, 200), 8080);
+  Blynk.begin(auth, ssid, pass, server_address, server_port);
   // Blynk.begin(auth, ssid, pass);
 
   Serial.println("Blynk Started... !");
@@ -125,7 +129,7 @@ void loop()
       Serial.print(coreTemperature);
       Serial.println("°C");
 
-	  // Send values to Blynk
+      // Send values to Blynk
       Blynk.virtualWrite(BLYNK_VIRTUAL_PIN_VOLTAGE, voltage);
       Blynk.virtualWrite(BLYNK_VIRTUAL_PIN_CURRENT, current);
       Blynk.virtualWrite(BLYNK_VIRTUAL_PIN_POWER, power);
