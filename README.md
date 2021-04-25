@@ -1,5 +1,6 @@
 # DIYPOWERMETERESP32
 Library for DIY Power Meter ESP32 Board by Axial Labs
+![DIY Power Meter ESP32 - Product1](https://user-images.githubusercontent.com/79985880/115999661-c20c2800-a616-11eb-83ea-e0ebc69d3556.jpg)
 
 ***
 
@@ -20,6 +21,13 @@ Make sure the device is connected to the AC power! Please be caution, AC is dang
 | Power factor  | 0.00~1.00            | 0.01            | 1%       |
 
 Maximum Load 10A (Resistive Load)
+
+### Wiring Diagram
+![DIY Power Meter ESP32 - Wiring Diagram](https://user-images.githubusercontent.com/79985880/115999509-427e5900-a616-11eb-9561-fa2669b17179.png)
+
+### Programming Terminal Connection
+![DIY Power Meter ESP32 - Connection Diagram](https://user-images.githubusercontent.com/79985880/115999555-7194ca80-a616-11eb-8484-cee892e66595.png)
+
 
 ### Example
 ```c++
