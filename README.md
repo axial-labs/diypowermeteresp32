@@ -1,4 +1,4 @@
-# DIYPOWERMETERESP32
+# DIY POWER METER ESP32
 Library for DIY Power Meter ESP32 Board by Axial Labs
 ![DIY Power Meter ESP32 - Product1](https://user-images.githubusercontent.com/79985880/115999661-c20c2800-a616-11eb-83ea-e0ebc69d3556.jpg)
 
