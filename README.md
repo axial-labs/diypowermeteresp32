@@ -29,7 +29,7 @@ Maximum Load 10A (Resistive Load)
 ![DIY Power Meter ESP32 - Connection Diagram](https://user-images.githubusercontent.com/79985880/115999555-7194ca80-a616-11eb-8484-cee892e66595.png)
 
 
-### Example
+### Example - Simple UART
 ```c++
 #include <DIYPOWERMETERESP32.h>
 
